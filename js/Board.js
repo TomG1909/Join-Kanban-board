@@ -16,7 +16,6 @@ async function init() {
 
     }, 50)
 
-    console.log('todos array',todos)
 }
 
 function updateHtml() {
@@ -27,22 +26,7 @@ function updateHtml() {
 
     for (let index = 0; index < todo.length; index++) {
         const element = todo[index];
-        document.getElementById('toDo').innerHTML += `<div draggable="true" ondragstart="startDragging(${element.createdAt})" class="todo">
-        <div class="task-header">
-        <div class="date">${element['taskDate']}</div>
-        <div class="${element['taskUrgency']}">${element['taskUrgency']}</div>
-        </div>
-        <span class="spanTitel"> ${element['taskTitle']}  </span>
-    
-        <span class="spanD"> ${element['taskDescription']} </span>
-        
-        <div class="task-header">
-        <div><img src="${element['creatorImg']}"class="img-profile"> </div>
-        <img src="./img/trash.png" class="delete" onclick="Trash(${element.createdAt})">
-        </div>
-    
-         </div>`;
-
+        document.getElementById('toDo').innerHTML += draggableHtmlElement(element);
     }
 
 
@@ -52,21 +36,8 @@ function updateHtml() {
 
     for (let index = 0; index < inProgress.length; index++) {
         const element = inProgress[index];
-        document.getElementById('inProgress').innerHTML += `<div draggable="true" ondragstart="startDragging(${element.createdAt})" class="todo">
-        <div class="task-header">
-        <div class="date">${element['taskDate']}</div>
-        <div class="${element['taskUrgency']}">${element['taskUrgency']}</div>
-        </div>
-        <span class="spanTitel"> ${element['taskTitle']}  </span>
-    
-        <span class="spanD"> ${element['taskDescription']} </span>
+        document.getElementById('inProgress').innerHTML += draggableHtmlElement(element);
         
-        <div class="task-header">
-        <div><img src="${element['creatorImg']}"class="img-profile"> </div>
-        <img src="./img/trash.png" class="delete" onclick="ToTrash(${index}, 'inProgress')">
-        </div>
-    
-         </div>`;
     }
 
 
@@ -76,21 +47,7 @@ function updateHtml() {
 
     for (let index = 0; index < testing.length; index++) {
         const element = testing[index];
-        document.getElementById('Testing').innerHTML += `<div draggable="true" ondragstart="startDragging(${element.createdAt})" class="todo">
-        <div class="task-header">
-        <div class="date">${element['taskDate']}</div>
-        <div class="${element['taskUrgency']}">${element['taskUrgency']}</div>
-        </div>
-        <span class="spanTitel"> ${element['taskTitle']}  </span>
-    
-        <span class="spanD"> ${element['taskDescription']} </span>
-        
-        <div class="task-header">
-        <div><img src="${element['creatorImg']}"class="img-profile"> </div>
-        <img src="./img/trash.png" class="delete" onclick="ToTrash(${element.index}, 'Testing')">
-        </div>
-    
-         </div>`;
+        document.getElementById('Testing').innerHTML += draggableHtmlElement(element);
     }
 
 
@@ -100,21 +57,7 @@ function updateHtml() {
 
     for (let index = 0; index < done.length; index++) {
         const element = done[index];
-        document.getElementById('Done').innerHTML += `<div draggable="true" ondragstart="startDragging(${element.createdAt})" class="todo">
-        <div class="task-header">
-        <div class="date">${element['taskDate']}</div>
-        <div class="${element['taskUrgency']}">${element['taskUrgency']}</div>
-        </div>
-        <span class="spanTitel"> ${element['taskTitle']}  </span>
-    
-        <span class="spanD"> ${element['taskDescription']} </span>
-        
-        <div class="task-header">
-        <div><img src="${element['creatorImg']}"class="img-profile"> </div>
-        <img src="./img/trash.png" class="delete" onclick="ToTrash(${index}, 'Done')">
-        </div>
-    
-         </div>`;
+        document.getElementById('Done').innerHTML += draggableHtmlElement(element);
     }
 
 
@@ -122,7 +65,23 @@ function updateHtml() {
 }
 
 
+function draggableHtmlElement(element) {
+    return `<div draggable="true" ondragstart="startDragging(${element.createdAt})" class="todo">
+    <div class="task-header">
+    <div class="date">${element['taskDate']}</div>
+    <div class="${element['taskUrgency']}">${element['taskUrgency']}</div>
+    </div>
+    <span class="spanTitel"> ${element['taskTitle']}</span>
 
+    <span class="spanD"> ${element['taskDescription']}</span>
+    
+    <div class="task-header">
+    <div><img src="${element['creatorImg']}"class="img-profile"></div>
+    <img src="./img/trash.png" class="delete" onclick="toTrash(${element.createdAt})">
+    </div>
+     </div>`;
+
+}
 
 
 function startDragging(createdAt) {
@@ -141,31 +100,21 @@ async function moveto(list) {
 
 }
 
-async function ToTrash(position, list) {
-    let toDolist = todos.filter(t => t['list'] === list);
 
-    let toDelete = toDolist[position];
-    let posToDelete = todos.indexOf(toDelete);
+
+async function toTrash(element) {
+   
+    let posToDelete = todos.findIndex(function (todo) {
+        return todo.createdAt == element
+        
+    })
+        
     todos.splice(posToDelete, 1);
     let allTasksAsString = JSON.stringify(todos);
     await backend.setItem('allTasks', allTasksAsString);
 
     updateHtml();
 
-}
-
-async function Trash(element) {
    
-
-   
-    let posToDelete = todos.indexOf(element);
-    todos.splice(posToDelete, 1);
-    let allTasksAsString = JSON.stringify(todos);
-    await backend.setItem('allTasks', allTasksAsString);
-
-    updateHtml();
-
-    console.log('pos', posToDelete)
-
    
 }

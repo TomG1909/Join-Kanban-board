@@ -30,7 +30,7 @@ async function addTask() {
         'taskUrgency': taskUrgency,
         'taskDescription': taskDescription,
         'taskCreator': taskCreator,
-        'createdAt': new Date().getTime().toString(),
+        'createdAt': new Date().getTime(),
         'creatorImg': taskCreatorImg
     };
 

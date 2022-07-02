@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>help</title>
+    <link rel="icon" type="image/x-icon" href="./img/favicon.png">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/help.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <script src="js/mini_backend.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/navbar.js"></script>
+    <script src="js/design.js"></script>
+</head>
+
+<body onload="includeHTML(),init()">
+    <div id="bg">
+        <div w3-include-html="templates/navbar.html"></div>
+
+        <div class="box-container">
+            <div class="help-box">
+                <h1 class="title">1. Add Task</h1>
+                <img src="./img/Step1._help.png" class="img-profile">
+                <div class="bg-white">
+                    <div class="text-container">Lets start by creating a task.<br> 1. Add a title for the Task (required field)<br> 2. choose the category the task is assigned to (required field)<br> 3. Add the task description (required field) <br> 4. choose a due date for the
+                        task <br> 5. define the task urgency from low to high <br> 6. choose the creator of the task <br> 7. click the button to finally create the task</div>
+                </div>
+            </div>
+            <div class="help-box">
+                <h1 class="title">2. Backlog</h1>
+                <img src="./img/Step2_help.png" class="img-profile">
+
+                <div class="bg-white">
+                    <div class="text-container"> In the backlog you can see a list of all created tasks by yourself or other team members <br>1. the task urgency <br> 2. the person the task is assigned to (here: the creator)<br> 3. the category the task is assigned to <br>4. the
+                        description of the task <br> 5. click the trash button to delete the task
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="help-box">
+                <h1 class="title">3. Board</h1>
+                <img src="./img/Step3_help.png" class="img-profile">
+                <div class="bg-white">
+                    <div class="text-container">The board gives an overview about the progress of all tasks. With drag and drop you can move the task to the next section<br> 1. In the 'To Do' section all tasks are shown which have to be done. The created task automatically is added
+                        to 'To Do' section<br> 2. When you or your collegues are working on the task move it to the 'In Progress' section <br> 3.If an app/software have to be tested or is in testing drop it in the 'Testing' section <br>4. If you are done
+                        move it forward to the 'Done' section <br> 5. You can delete the task by clicking on the trash button
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+    </div>
+    </div>
+
+    <div w3-include-html="templates/footer.html"></div>
+
+</body>
+
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+   
+    <link rel="stylesheet" href="css/navbar.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/Board.css" />
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/backlog.css">
+    <script src="js/mini_backend.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/Board.js"></script>
+   
+    <script src="js/design.js"></script>
+    <script src="js/navbar.js"></script>
+
+    <title>Board</title>
+    <link rel="icon" type="image/x-icon" href="./img/favicon.png">
+</head>
+
+<body onload="init(), loadBackground()">
+
+    <div id="bg">
+        <div>
+            <div w3-include-html="templates/navbar.html"> </div>
+
+
+
+
+
+            <div class="column-container">
+                <div class="all">
+                    <div class="contain">
+                        <h1>TO DO</h1>
+                        <div id="toDo" class="ToWrite" ondrop="moveto('toDo')" ondragover="allowDrop(event)"></div>
+                    </div>
+                    <div class="contain">
+                        <h1>IN PROGRESS</h1>
+                        <div id="inProgress" class="ToWrite" ondrop="moveto('inProgress')" ondragover="allowDrop(event)"></div>
+                    </div>
+                    <div class="contain">
+                        <h1>TESTING</h1>
+                        <div id="Testing" class="ToWrite" ondrop="moveto('Testing')" ondragover="allowDrop(event)"></div>
+                    </div>
+                    <div class="contain">
+                        <h1>DONE</h1>
+                        <div id="Done" class="ToWrite" ondrop="moveto('Done')" ondragover="allowDrop(event)"></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div w3-include-html="templates/footer.html"> </div>
+</body>
+
+</html>

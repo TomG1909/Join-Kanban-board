@@ -1,0 +1,71 @@
+body {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body::after {
+    position: absolute;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    z-index: -1;
+    content: url('/img/background_images/ambrellas.jpg') url('/img/background_images/beach_blue.jpg') url('/img/background_images/beach_green.jpg') url('/img/background_images/bear_colors.jpg') url('/img/background_images/bridge.jpg') url('/img/background_images/car_2.jpg') url('/img/background_images/car.jpg') url('/img/background_images/city.jpg') url('/img/background_images/colors.jpg') url('/img/background_images/desert.jpg') url('/img/background_images/dogs.jpg') url('/img/background_images/Erde.jpg') url('/img/background_images/fire.jpg') url('/img/background_images/monumental_rocks.jpg') url('/img/background_images/mountains_2.jpg') url('/img/background_images/mountains.jpg') url('/img/background_images/office.jpg') url('/img/background_images/stripes.jpg') url('/img/background_images/turtle.jpg') url('/img/background_images/zebras.jpg');
+
+}
+
+#bg {
+
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.impressum-style {
+    position: absolute;
+    left: 205px;
+    right: 0px;
+    padding: 30px;
+    height: 80%;
+    color: whitesmoke;
+    overflow-wrap: break-word;
+    overflow-y: auto;
+}
+
+a {
+    text-decoration: none !important;
+    color: white;
+    font-size: 20px;
+}
+
+.d-flex {
+    display: flex;
+    align-items: center;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+
+::-webkit-scrollbar-track {
+    background: #4c4747;
+}
+
+
+::-webkit-scrollbar-thumb {
+    background: rgb(6, 6, 6);
+}
+
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+@media(max-width:650px) {
+    .hide-mobile {
+        display: none;
+    }
+}

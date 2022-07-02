@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design</title>
+    <link rel="icon" type="image/x-icon" href="./img/favicon.png">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/design.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <script src="js/mini_backend.js"></script>
+
+    <script src="js/script.js"></script>
+    <script src="js/navbar.js"></script>
+    <script src="js/design.js"></script>
+
+
+</head>
+
+<body onload="init(),includeHTML(), showSmallPictures()">
+    <div id="bg">
+        <div w3-include-html="templates/navbar.html"></div>
+
+        <div class="container-design">
+            <h1>Wähle dein Hintergrundbild</h1>
+            <div class="container-buttons">
+                <div id="small-pictures"></div>
+            </div>
+        </div>
+        <div w3-include-html="templates/footer.html"></div>
+    </div>
+</body>
+
+</html>

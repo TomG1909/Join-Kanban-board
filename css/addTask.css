@@ -1,0 +1,131 @@
+span {
+    color: white;
+    font-size: 25px;
+    margin-top: 15px;
+    font-weight: bolder;
+}
+
+p {
+    color: white;
+}
+
+.header-container {
+    margin-left: 250px;
+    text-align: start;
+}
+
+.addTask-container {
+    background-color: rgba(0, 0, 0, 0.25);
+    margin-left: 200px;
+    border: 2px black;
+}
+
+.formular-cont {
+    display: flex;
+    justify-content: space-around;
+}
+
+.flex-cont {
+    width: 330px;
+}
+
+.input-field {
+    width: 300px;
+    height: 35px;
+}
+
+.textarea-height {
+    height: 110px;
+}
+
+.btn-cont {
+    display: flex;
+    justify-content: center;
+}
+
+.btn {
+    height: 45px;
+    width: 120px;
+    margin: 20px;
+    margin-top: 20px;
+    color: black;
+}
+
+.btn:hover {
+    background-color: rgb(6, 6, 39);
+    color: rgb(253, 253, 253);
+}
+
+.img-profile {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: 100% 29%;
+    background-color: rgba(128, 128, 128, 0.5);
+}
+
+.creator-cont {
+    width: 309px;
+    display: flex;
+    align-items: center;
+}
+
+.selection-creator {
+    margin-left: 30px;
+    width: 220px;
+}
+
+.selection-field-width {
+    width: 309px;
+}
+
+.created-task {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 425px;
+    height: 60px;
+    width: 300px;
+    background-color: #1b5e20;
+    color: white;
+    font-size: 16px;
+}
+
+
+.hide {
+    display: none;
+}
+
+.d-none:hover {
+    -webkit-transition: opacity 0.5s ease-in-out;
+    -moz-transition: opacity 0.5s ease-in-out;
+    transition: opacity 0.5s ease-in-out;
+    opacity: 0;
+    display: block;
+}
+
+@media(max-width:900px) {
+    .formular-cont {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .addTask-container {
+        margin-left: 0;
+        overflow-y: scroll;
+        max-height: 80vh;
+    }
+
+    .flex-cont {
+        width: auto;
+    }
+
+    .header-container {
+        margin-left: 40px;
+        margin-top: 7px;
+        padding-top: 0;
+    }
+}

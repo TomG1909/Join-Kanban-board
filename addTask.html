@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/addTask.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <script src="js/mini_backend.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/addTask.js"></script>
+    <script src="js/navbar.js"></script>
+    <script src="js/design.js"></script>
+
+    <title>addTask</title>
+    <link rel="icon" type="image/x-icon" href="./img/favicon.png">
+</head>
+
+<body onload="includeHTML(),init()">
+    <div id="bg">
+        <div w3-include-html="templates/navbar.html"> </div>
+        <div class="header-container">
+            <span>ADD TASK</span>
+            <p>Learning Management System Project</p>
+        </div>
+        <div>
+            <form class="addTask-container" onsubmit="addTask(); return false">
+                <div class="formular-cont" onclick="addDnone()">
+                    <div class="flex-cont">
+                        <p>TITLE</p>
+                        <input onfocus="this.value=''" required minlength="4" class="input-field" id="titleInputfield" type="text" placeholder="">
+                        <p>CATEGORY</p>
+                        <select required class="input-field selection-field-width" id="selectCategory" placeholder="Kategorie">
+                            <option>Marketing</option>
+                            <option>Development</option>
+                            <option>Design</option>
+                        </select>
+                        <p>DESCRIPTION</p>
+                        <textarea onfocus="this.value=''" required minlength="4" class="input-field textarea-height" id="descriptionInputfield" cols="30">Describe here...</textarea>
+                    </div>
+                    <div class="flex-cont">
+                        <p>DUE DATE</p>
+                        <input required class="input-field" id="dateInputfield" type="date" onfocus="(this.type='date')">
+                        <p>URGENCY</p>
+                        <select required class="input-field selection-field-width" id="selectUrgency" placeholder="Kategorie">
+                            <option>Low</option>
+                            <option>Normal</option>
+                            <option>High</option>
+                        </select>
+                        <p>CREATOR</p>
+                        <div class="creator-cont">
+                            <img id="creatorImg" class="img-profile" src="img/user.png">
+                            <select class="input-field selection-creator" id="taskCreator" onchange="changeCreatorImage()">
+                                <option value="Majd">Majd</option>
+                                <option value="Toma">Toma</option>
+                                <option value="Peter">Peter</option>
+
+                            </select>
+                        </div>
+                    </div>
+                    <div id="createtTaskInfo" class="created-task hide">NEUER TASK WURDE ERSTELLT</div>
+                </div>
+                <div class="btn-cont">
+                    <button type="submit" class="btn">CREATE TASK</button>
+                </div>
+            </form>
+
+        </div>
+
+        <div w3-include-html="templates/footer.html"></div>
+    </div>
+
+    </div>
+
+
+</body>
+
+</html>

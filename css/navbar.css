@@ -1,0 +1,149 @@
+.navbar-container {
+    width: 200px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: rgba(14, 14, 15, 0.493);
+    border-right: 5px solid #ffffff;
+    z-index: 5;
+}
+
+#navigation {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.navlist {
+    text-decoration: none !important;
+    color: white !important;
+    margin-bottom: 25px !important;
+    font-size: 25px !important;
+    padding-left: 44px !important;
+    border-left: 5px solid transparent !important;
+}
+
+
+.active {
+    border-left: 5px solid !important;
+    color: white !important;
+}
+
+.img-design {
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
+    margin-bottom: 25px;
+}
+
+#design-container {
+    display: flex;
+    align-items: center;
+    margin-top: 60px;
+}
+
+.d-none {
+    display: none;
+}
+
+
+
+.btn-logout {
+    display: flex;
+    justify-content: flex-end !important;
+    margin-right: 20px !important;
+    margin-top: 10px !important;
+    color: white !important;
+    font-size: 20px !important;
+}
+
+#menuwrapper {
+    display: none;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+
+@media(max-width:1030px) {
+    #menuwrapper {
+        display: block;
+    }
+
+    .overlay {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: rgba(14, 14, 15, 0.39);
+        background-color: rgba(0, 0, 0, 0.9);
+        /* Black w/opacity */
+        overflow-x: hidden;
+        transition: 0.5s;
+
+    }
+
+    .overlay:hover div {
+        display: block;
+    }
+
+    .overlay-content {
+        position: relative;
+        width: 100%;
+        text-align: center;
+    }
+
+    .overlay .closebtn {
+        position: absolute;
+        top: 20px;
+        right: 45px;
+        font-size: 30px;
+        z-index: 9999;
+        cursor: pointer;
+    }
+
+    .d-none {
+        display: block !important;
+    }
+
+    .icon {
+        position: absolute;
+        right: 20px;
+        top: 10px;
+    }
+
+    #design-container {
+        justify-content: center;
+    }
+
+    #navigation {
+
+        align-items: center;
+    }
+
+    .hide-mobile {
+        display: none;
+    }
+
+    .navlist {
+        padding-left: 0 !important;
+    }
+
+    a:hover {
+        border-bottom: solid 5px white !important;
+    }
+
+
+
+
+
+}

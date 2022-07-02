@@ -43,7 +43,8 @@ body {
 }
 
 .row-backlog {
-    height: 100px;
+    max-height: 250px;
+    min-height: 100px;
     background-color: white !important;
     margin-left: 220px;
     margin-right: 10px;
@@ -137,8 +138,9 @@ body {
 #tasks {
     max-height: 520px;
     overflow-y: auto;
-    position: relative;
-    top: 70px;
+    position: absolute;
+    top: 135px;
+    width: 100%;
 }
 
 body::-webkit-scrollbar-thumb {
@@ -150,6 +152,7 @@ body::-webkit-scrollbar-thumb {
     background-color: rgba(14, 14, 15, 0.35);
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .row::after {
@@ -168,7 +171,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .middle {
-    width: 40%;
+
     margin: 20px;
 }
 
@@ -176,10 +179,22 @@ body::-webkit-scrollbar-thumb {
     width: 37%;
 }
 
+.category {
+    width: 18%;
+    margin: 10px;
+}
+
+.text {
+    width: 41%;
+    margin-left: 107px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
 .descriptionBox {
     overflow-y: scroll;
     max-height: 100px;
-    width: 30%;
+    width: 40%;
 
 }
 
@@ -190,14 +205,19 @@ body::-webkit-scrollbar-thumb {
 .task-container {
     display: flex;
     justify-content: space-between;
-    text-align: center;
     align-items: center;
-    width: 60%;
+    width: 45%;
 }
 
 @media(max-width:1030px) {
+
+    #tasks {
+        top: 60px;
+    }
+
     .row {
         margin-left: 0;
+        padding-bottom: 5px;
     }
 
     .left {
@@ -217,16 +237,21 @@ body::-webkit-scrollbar-thumb {
         margin: 10px;
     }
 
-    .text {
-        width: 30%;
+    .category {
+        width: 18%;
         margin: 10px;
-        text-align: center;
+    }
+
+    .text {
+        width: 38%;
+        margin: 10px;
+
     }
 
     .right {
 
         margin: 20px;
-        text-align: center;
+
     }
 
     .backlog-container {
@@ -245,7 +270,9 @@ body::-webkit-scrollbar-thumb {
         margin: 3px;
     }
 
-    .Low {
+    .Low,
+    .High,
+    .Normal {
         width: 34px;
         margin-right: 0px;
         margin-left: 0px;
@@ -261,5 +288,95 @@ body::-webkit-scrollbar-thumb {
         overflow-y: scroll;
         max-height: 100px;
         word-break: break-all;
+        margin-left: 73px;
+    }
+
+    @media(max-width:600px) {
+        .row-backlog {
+            flex-direction: column;
+        }
+
+        .icon {
+
+            width: 20px;
+        }
+
+        .hide {
+            display: none;
+        }
+
+        .container-trash {
+            display: flex;
+            width: 100%;
+            justify-content: flex-end;
+            margin-bottom: 10px;
+        }
+
+        .task-container {
+            width: 90%;
+        }
+
+        .category {
+            width: 30%;
+            margin: 10px;
+        }
+
+        .middle {
+            width: 23%;
+            margin: 10px;
+        }
+
+        .descriptionBox {
+
+            margin-left: 0;
+        }
+
+        .text {
+            width: 84%;
+            margin: 10px;
+
+        }
+
+    }
+
+    @media(max-width:300px) {
+        .hide-name {
+            display: none;
+        }
+
+        .category {
+            width: 45%;
+            margin: 10px;
+        }
+
+        .icon {
+            right: 0px;
+            top: 10px;
+        }
+
+        .pd {
+            padding-left: 0;
+        }
+
+        .Low,
+        .High,
+        .Normal {
+            font-size: 10px;
+        }
+
+        .img-profile {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            margin: 3px;
+        }
+
+        .category {
+            font-size: 12px;
+        }
+
+        .title {
+            font-size: 7px;
+        }
     }
 }

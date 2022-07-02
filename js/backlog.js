@@ -26,12 +26,12 @@ function showTasks() {
         </div>
         <div class="column middle d-flex">
         <div><img src ="${Task['creatorImg']}" class="img-profile"></div>
-        <span>${Task['taskCreator']}</span>
+        <span class="hide-name">${Task['taskCreator']}</span>
         </div>
-        <div class="column middle pd">${Task['taskCategory']}</div>
+        <div class="column category pd">${Task['taskCategory']}</div>
       </div>
-        <div class="column text descriptionBox pd">${Task['taskDescription']}</div>
-        <div><img src=./img/trash.png class="delete" onclick="addToTrash(${i})"></div>
+        <div class="column text descriptionBox">${Task['taskDescription']}</div>
+        <div class="container-trash"><img src=./img/trash.png class="delete" onclick="addToTrash(${i})"></div>
         </div>`;
     }
 }

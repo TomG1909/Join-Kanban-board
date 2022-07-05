@@ -77,7 +77,13 @@ function draggableHtmlElement(element) {
     
     <div class="task-header">
     <div><img src="${element['creatorImg']}"class="img-profile"></div>
-    <img src="./img/trash.png" class="delete" onclick="toTrash(${element.createdAt})">
+ 
+   
+  
+    <img src="./img/trash_red.png" class="delete active-pic" onclick="toTrash(${element.createdAt})">
+   
+   
+    
     </div>
      </div>`;
 

@@ -379,4 +379,10 @@ body::-webkit-scrollbar-thumb {
             font-size: 7px;
         }
     }
+
+    @media(max-width:250px) {
+        .category {
+            font-size: 8px;
+        }
+    }
 }

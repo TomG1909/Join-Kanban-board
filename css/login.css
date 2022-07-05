@@ -113,6 +113,7 @@ span a {
     width: 90vw;
     max-height: 90vh;
     min-height: 50vh;
+    max-width: 40vw;
 }
 
 .form-box span {

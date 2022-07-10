@@ -192,7 +192,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .descriptionBox {
-    overflow-y: scroll;
+    overflow-y: auto;
     max-height: 100px;
     width: 40%;
 
@@ -273,7 +273,7 @@ body::-webkit-scrollbar-thumb {
     .Low,
     .High,
     .Normal {
-        width: 34px;
+        width: 55px;
         margin-right: 0px;
         margin-left: 0px;
         padding: 5px;
@@ -281,11 +281,11 @@ body::-webkit-scrollbar-thumb {
 
     .delete {
         width: 20px;
-        margin-right: 0;
+        margin: 10px;
     }
 
     .descriptionBox {
-        overflow-y: scroll;
+        overflow-y: auto;
         max-height: 100px;
         word-break: break-all;
         margin-left: 73px;

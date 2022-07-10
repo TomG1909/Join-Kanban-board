@@ -154,3 +154,9 @@ span a {
 .img-login {
     height: 120px;
 }
+
+@media(max-width:650px) {
+    .form-box {
+        max-width: 80vw;
+    }
+}

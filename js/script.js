@@ -40,4 +40,7 @@ async function addTask() {
 
     let allTasksAsString = JSON.stringify(allTasks);
     await backend.setItem('allTasks', allTasksAsString);
+
+
+    
 }

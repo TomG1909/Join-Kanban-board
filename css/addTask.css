@@ -32,6 +32,14 @@ p {
 .input-field {
     width: 300px;
     height: 35px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    border: transparent;
+    color: white;
+}
+
+::-webkit-calendar-picker-indicator {
+    filter: invert(1);
 }
 
 .textarea-height {
@@ -48,12 +56,15 @@ p {
     width: 120px;
     margin: 20px;
     margin-top: 20px;
-    color: black;
+    color: white;
+    background-color: rgb(0, 102, 255);
+    border-radius: 10px;
+    border: transparent;
 }
 
 .btn:hover {
-    background-color: rgb(6, 6, 39);
-    color: rgb(253, 253, 253);
+    background-color: whitesmoke;
+    color: black;
 }
 
 .img-profile {

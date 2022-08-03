@@ -42,8 +42,21 @@ body {
     flex-direction: column;
 }
 
-.row-backlog {
+.task {
+    position: absolute;
     max-height: 250px;
+    min-height: 100px;
+    background-color: white !important;
+    margin-left: 220px;
+    margin-right: 10px;
+    margin-bottom: 30px;
+
+
+}
+
+.row-backlog {
+    position: relative;
+    max-height: 200px;
     min-height: 100px;
     background-color: white !important;
     margin-left: 220px;
@@ -123,10 +136,10 @@ body {
 }
 
 .img-profile {
-    width: 90px;
-    height: 90px;
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
-    margin: 20px;
+    margin: 10px;
     background-color: rgba(128, 128, 128, 0.5);
 }
 

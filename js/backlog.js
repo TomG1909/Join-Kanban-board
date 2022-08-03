@@ -19,7 +19,7 @@ function showTasks() {
 
         document.getElementById('tasks').innerHTML += 
         
-    `<div class="row-backlog">
+        `<div class="row-backlog">
         <div class="task-container">
         <div class="column left d-flex">
         <div class="${urgency}">${urgency}</div>
